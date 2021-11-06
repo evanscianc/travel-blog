@@ -1,0 +1,169 @@
+.App {
+  overflow: scroll;
+  align-content: center;
+  background-size: cover;
+  background: rgb(29, 185, 84);
+  background: linear-gradient(
+    90deg,
+    rgba(29, 185, 84, 1) 0%,
+    rgba(29, 185, 84, 1) 56%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  min-height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 150px auto 300px;
+  padding: 10px 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-bottom: 400px;
+}
+
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+nav,
+article {
+  height: 100%;
+  padding: 10px;
+}
+
+nav {
+  /* background-color: #dee9ff; */
+  color: white;
+}
+
+nav p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+article {
+  align-self: center;
+}
+
+article .date {
+  font-style: italic;
+}
+
+article .body {
+  white-space: break-spaces;
+}
+
+.SignOut {
+  font-size: 14px;
+}
+
+.pageTitle {
+  margin-left: 150px;
+}
+
+.newArticle {
+  height: 100%;
+  font-size: 16px;
+}
+
+.welcomeMsg {
+  font-size: 24px;
+}
+
+.error {
+  background-color: red;
+  color: gold;
+  padding: 5px;
+}
+
+.signOutBtn {
+  margin-left: 10px;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 26px;
+  top: 80px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
