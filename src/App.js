@@ -73,7 +73,7 @@ export default function App() {
       </header>
 
       <Menu right>
-        {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
+        {user && <Nav articles={articles} setArticle={setArticle} />}
       </Menu>
 
       {!user ? (
