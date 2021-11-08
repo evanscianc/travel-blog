@@ -49,9 +49,9 @@ export default function App() {
 
   // Update the "database" *then* update the internal React state. These
   // two steps are definitely necessary.
-  function addArticle({ title, body }) {
+  async function addArticle({ title, body }) {
     let author = auth.currentUser.displayName
-    createArticle({ title, body, author }).then((article) => {
+    return createArticle({ title, body, author }).then((article) => {
       setArticle(article)
       setArticles([article, ...articles])
       setWriting(false)

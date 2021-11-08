@@ -11,7 +11,9 @@ export default function ArticleEntry({ addArticle }) {
     if (!title.trim() || !body.trim()) {
       setError("Both the title and body must be supplied")
     } else {
-      addArticle({ title, body })
+      addArticle({ title, body }).catch((e) => {
+        setError(e.message)
+      })
     }
   }
 
