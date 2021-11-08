@@ -19,6 +19,7 @@ header {
   color: white;
   display: grid;
   grid-template-columns: 150px auto 300px;
+  /* grid-column: 1 / span 2; */
   padding: 10px 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 32px;
@@ -82,9 +83,24 @@ article .body {
   margin-left: 150px;
 }
 
+.signInMsg {
+  font-size: 14px;
+}
+
+.signInMsgBig {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  margin-top: 250px;
+  text-align: center;
+}
+
 .newArticle {
   height: 100%;
   font-size: 16px;
+}
+
+.newArticle:hover {
+  background-color: #8c998c;
 }
 
 .welcomeMsg {
@@ -99,6 +115,14 @@ article .body {
 
 .signOutBtn {
   margin-left: 10px;
+}
+
+.signInBtn {
+  height: 100%;
+}
+
+.signInBtn:hover {
+  background-color: #8c998c;
 }
 
 /* Position and sizing of burger button */

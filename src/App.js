@@ -1,5 +1,3 @@
-// todo: fix what it looks like when you're not logged in
-// it might be a problem/thing with "span /"
 import { useEffect, useState } from "react"
 import Nav from "./Nav"
 import Article from "./Article"
@@ -13,7 +11,10 @@ import { bubble as Menu } from "react-burger-menu"
 
 function SignIn() {
   return (
-    <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>
+    <button
+      className="signInBtn"
+      onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}
+    >
       Sign In
     </button>
   )
@@ -60,12 +61,14 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        {user && (
+        {user ? (
           <button className="newArticle" onClick={() => setWriting(true)}>
             New Article
           </button>
+        ) : (
+          <div className="signInMsg">Please sign in to view articles. </div>
         )}
-        <div className="pageTitle"> Awesome Travel Blog </div>
+        <div className="pageTitle"> 🌴Awesome Travel Blog🌴 </div>
         {!user ? <SignIn /> : <SignOut />}
       </header>
 
@@ -74,7 +77,7 @@ export default function App() {
       </Menu>
 
       {!user ? (
-        <div></div>
+        <div className="signInMsgBig">Please sign in to view articles🌴 </div>
       ) : writing ? (
         <ArticleEntry addArticle={addArticle} />
       ) : (

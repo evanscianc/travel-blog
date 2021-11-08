@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useState } from "react"
 
 export default function ArticleEntry({ addArticle }) {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [error, setError] = useState(null);
+  const [title, setTitle] = useState("")
+  const [body, setBody] = useState("")
+  const [error, setError] = useState(null)
 
   function submit(e) {
-    setError(null);
-    e.preventDefault();
+    setError(null)
+    e.preventDefault()
     if (!title.trim() || !body.trim()) {
-      setError("Both the title and body must be supplied");
+      setError("Both the title and body must be supplied")
     } else {
-      addArticle({ title, body });
+      addArticle({ title, body })
     }
   }
 
@@ -30,5 +30,5 @@ export default function ArticleEntry({ addArticle }) {
         <button type="submit">Create</button>
       </form>
     </div>
-  );
+  )
 }
