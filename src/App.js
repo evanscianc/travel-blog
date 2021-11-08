@@ -1,3 +1,5 @@
+// todo: fix what it looks like when you're not logged in
+// it might be a problem/thing with "span /"
 import { useEffect, useState } from "react"
 import Nav from "./Nav"
 import Article from "./Article"

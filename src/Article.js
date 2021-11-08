@@ -10,10 +10,11 @@ export default function Article({ article }) {
         <section>
           <h2>{article.title}</h2>
           <p> by {article.author} </p>
-          {/* currently causing bug related to when you create a new article */}
-          <p className="date">{`Posted: ${article.date
-            .toDate()
-            .toLocaleDateString()}`}</p>
+          <p className="date">{`Posted: ${
+            article.date.toString().substring(0, 9) === "Timestamp"
+              ? article.date.toDate().toLocaleDateString()
+              : article.date.toLocaleDateString()
+          }`}</p>
           <p className="body">{article.body}</p>
         </section>
       )}
