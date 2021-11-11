@@ -19,7 +19,6 @@ header {
   color: white;
   display: grid;
   grid-template-columns: 150px auto 300px;
-  /* grid-column: 1 / span 2; */
   padding: 10px 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 32px;

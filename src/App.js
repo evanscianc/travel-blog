@@ -72,9 +72,18 @@ export default function App() {
         {!user ? <SignIn /> : <SignOut />}
       </header>
 
-      <Menu right>
-        {user && <Nav articles={articles} setArticle={setArticle} />}
-      </Menu>
+      {user && (
+        <div
+          className="SideBar"
+          onClick={() => {
+            setWriting(false)
+          }}
+        >
+          <Menu right>
+            {user && <Nav articles={articles} setArticle={setArticle} />}
+          </Menu>
+        </div>
+      )}
 
       {!user ? (
         <div className="signInMsgBig">Please sign in to view articles🌴 </div>
