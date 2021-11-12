@@ -37,18 +37,12 @@ export default function App() {
   const [writing, setWriting] = useState(null)
   const [user] = useAuthState(auth)
 
-  // This is a trivial app, so just fetch all the articles once, when
-  // the app is loaded. A real app would do pagination. Note that
-  // "fetchArticles" is what gets the articles from the service and
-  // then "setArticles" writes them into the React state.
   useEffect(() => {
     fetchArticles().then(setArticles)
   }, [])
 
   useEffect(() => {}, [article])
 
-  // Update the "database" *then* update the internal React state. These
-  // two steps are definitely necessary.
   async function addArticle({ title, body }) {
     let author = auth.currentUser.displayName
     return createArticle({ title, body, author }).then((article) => {
